@@ -16,12 +16,12 @@ class Brush extends Tool{
         this.mouseDown = false 
     }
     mouseDownHandler(e){
-        this.mouseUp = true
-        this.context.beginDraw()
+        this.mouseDown = true
+        this.context.beginPath()
         this.context.moveTo(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop)
     }
     mouseMoveHandler(e){
-        if(this.mouseUpHandler){
+        if(this.mouseDown){
             this.draw(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop)
         }
     }

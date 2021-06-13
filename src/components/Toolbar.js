@@ -1,10 +1,13 @@
 import React from 'react'
+import canvasState from '../store/canvasState'
+import toolState from '../store/toolState'
 import '../styles/toolbar.scss'
+import Brush from '../tools.js/Brush'
 
 const Toolbar = () => {
     return(
         <div className="toolbar">
-            <button className="toolbar__btn brush"></button>
+            <button className="toolbar__btn brush" onClick={() => toolState.setTool( new Brush(canvasState.canvas))}></button>
             <button className="toolbar__btn rectangle"></button>
             <button className="toolbar__btn circle"></button>
             <button className="toolbar__btn eraser"></button>
