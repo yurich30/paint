@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import canvasState from '../store/canvasState'
 import toolState from '../store/toolState'
 import '../styles/canvas.scss'
-import Brush from '../tools.js/Brush'
+import Brush from '../tools/Brush'
 
 const Canvas = observer( () => {
 
